@@ -1,0 +1,10 @@
+@import"mainColor";
+//footer of the card styling
+.small-txt{
+    font-size: 1.4rem;
+    color: $mainColor;
+    margin-bottom: 2rem;
+}
+.small-txt:hover{
+    color: $secondaryColor;
+}

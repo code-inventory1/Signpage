@@ -1,0 +1,130 @@
+ @import"mainColor";
+ @import"signup";
+
+ *{
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 62.5%;
+}
+//main body of the page
+.App{
+    background-color: #282c34;
+    text-align: center;
+    height: 100vh;
+    width: auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.App-header{
+    background-color: aliceblue;
+    height: auto;
+    width: 32vw;
+    border-radius: 2px;
+    font-size: calc(10px + 2vmin);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+//language selector styling
+.langSelector{
+    display: flex;
+    margin-right: 2rem;
+    margin-left: auto;
+    margin-top:2rem;
+    border: none;
+}
+.App-header h3{
+    text-transform: capitalize;
+    font-weight: 400;
+    color: gray;
+    margin-top: 1rem;
+    font-size: 1.8rem;
+}
+.App-header .siginInput{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:1.7rem;
+    width: 80%;
+    height: 2.5rem;
+    padding-left: 1rem;
+    font-style: italic;
+}
+.App-header .siginInput:hover{
+    font-style: normal;
+    color: black;
+    background-color: rgb(245, 241, 235);
+    border-color:  rgb(199, 195, 189);
+}
+//mid-section styling
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:1.7rem;
+}
+#loggedIN{
+    height: 1rem;
+}
+.content label{
+    font-size: 1.2rem;
+    color: gray;
+}
+.blue-text{
+    color: $mainColor;
+    font-size: 1.4rem;
+    margin-left: 2rem;
+    cursor: pointer;
+}
+.content .blue-text:hover{
+    color:$secondaryColor;
+}
+.btn-primary{
+    background-color: $mainColor;
+    width: 80%;
+    height: 3rem;
+    border: none;
+    border-radius: 3px;
+    margin-top: 3rem;
+    margin-bottom: 6rem;
+    color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.btn-primary:hover{
+    background-color: $secondaryColor;
+    color: black;
+}
+.danger-text{
+    color: red;
+    font-size: 1.1rem;
+}
+//footer of the card styling
+.signUptxt{
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+}
+.signUptxt p{
+    color: grey;
+}
+.signUptxt span{
+    color: $mainColor;
+    margin-left: .7rem;
+}
+.signUptxt span:hover{
+    color:$secondaryColor;
+}
+//media queries
+@media (max-width: 769px){
+    html{
+        font-size: 50%;
+    }
+}
+@media (max-width: 571px){
+    html{
+        font-size: 35%;
+    }
+}
