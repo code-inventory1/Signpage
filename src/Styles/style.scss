@@ -1,5 +1,7 @@
  @import"mainColor";
  @import"signup";
+ @import "~bootstrap/scss/bootstrap.scss";
+
 
  *{
     margin: 0;
@@ -26,7 +28,7 @@ html{
     height: auto;
     width: 32vw;
     border-radius: 2px;
-    font-size: calc(10px + 2vmin);
+    font-size: calc(8px + 2vmin);
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 //language selector styling
@@ -36,6 +38,7 @@ html{
     margin-left: auto;
     margin-top:2rem;
     border: none;
+    font-size:1.4rem;
 }
 .App-header h3{
     text-transform: capitalize;
@@ -50,9 +53,10 @@ html{
     margin-right: auto;
     margin-top:1.7rem;
     width: 80%;
-    height: 2.5rem;
+    height: 2.7rem;
     padding-left: 1rem;
     font-style: italic;
+    font-size:1.4rem;
 }
 .App-header .siginInput:hover{
     font-style: normal;
@@ -68,15 +72,15 @@ html{
     margin-top:1.7rem;
 }
 #loggedIN{
-    height: 1rem;
+    height: 1.2rem;
 }
 .content label{
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     color: gray;
 }
 .blue-text{
     color: $mainColor;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     margin-left: 2rem;
     cursor: pointer;
 }
@@ -86,7 +90,7 @@ html{
 .btn-primary{
     background-color: $mainColor;
     width: 80%;
-    height: 3rem;
+    height: 3.3rem;
     border: none;
     border-radius: 3px;
     margin-top: 3rem;
@@ -117,6 +121,20 @@ html{
 .signUptxt span:hover{
     color:$secondaryColor;
 }
+.signINTable{
+    text-align: center;
+    height: 100vh;
+    width: auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.onshow{
+    cursor:pointer;
+}
+
 //media queries
 @media (max-width: 769px){
     html{

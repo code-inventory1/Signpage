@@ -1,10 +1,11 @@
-import React from "react";
+import React,{useState} from "react";
 import "./Styles/style.scss";
 import { useForm } from "react-hook-form";
 import { NavLink } from "react-router-dom";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useHistory } from "react-router";
 import * as yup from "yup";
+import ForgotModal from "./ForgotModal";
 // schema for validation
 let schema = yup.object().shape({
   email: yup.string().required("Email is required").email("Email is not valid"),
@@ -13,11 +14,9 @@ let schema = yup.object().shape({
     .required("Password is required")
     .min(8, "Password length must be atleast 8"),
 });
-//Event handler for forgot password
-const inputHandle = () => {
-  prompt("Enter your Phone Number");
-};
+
 function Login() {
+   const [smShow, setSmShow] = useState(false);
   const history = useHistory();
   const {
     register,
@@ -29,6 +28,7 @@ function Login() {
   const onSubmit = (data) => {
     history.push("/signin");
   };
+  const handleClose=() => setSmShow(false);
   return (
     <div className="App">
       <header className="App-header">
@@ -60,9 +60,10 @@ function Login() {
           <div className="content">
             <input type="checkbox" name="loggedIN" id="loggedIN" />
             <label for="loggedIN">Keep me logged in for 30 days</label>
-            <p className="blue-text" onClick={inputHandle}>
+            <p className="blue-text" onClick={() => setSmShow(true)}>
               Forgot password?
             </p>
+            <ForgotModal handleClose={handleClose} smShow={smShow}  />
           </div>
           <input type="submit" value="Log In" className="btn-primary" />
         </form>
