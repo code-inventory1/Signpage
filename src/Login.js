@@ -19,6 +19,7 @@ const inputHandle = () => {
 };
 function Login() {
   const history = useHistory();
+  const [formData,setFormData]=React.useState();
   const {
     register,
     handleSubmit,
